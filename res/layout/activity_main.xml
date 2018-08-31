@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <magtu.com.example.clockanalog.GameView
+    <magtu.com.example./* rep of project */.GameView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
