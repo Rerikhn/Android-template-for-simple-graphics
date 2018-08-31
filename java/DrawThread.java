@@ -1,5 +1,3 @@
-package magtu.com.example.clockanalog;
-
 import android.annotation.SuppressLint;
 import android.graphics.*;
 import android.hardware.SensorEventListener;
