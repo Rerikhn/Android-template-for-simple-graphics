@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity /*implements SensorEventList
                 SensorManager.SENSOR_DELAY_GAME);*/
     }
 
-    /**
-     * Function that turn on immersive mode
-     */
+    // Function for fullscreen immersive mode
     public void hideUI() {
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
