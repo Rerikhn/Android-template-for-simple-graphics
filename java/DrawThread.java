@@ -7,9 +7,8 @@ import android.view.SurfaceHolder;
 
 import java.util.Random;
 
-/**
- * Main class of all graphics with thread
- */
+// Main class of all graphics with thread
+
 public class DrawThread extends Thread {
 
     private DisplayMetrics metrics;
