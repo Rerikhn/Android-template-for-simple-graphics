@@ -17,6 +17,8 @@ public class DrawThread extends Thread {
     private long prevTime;
     private Paint paint;
     private boolean runFlag;
+    private float scaleX, scaleY;
+    private DisplayMetrics metrics;
 
     @SuppressLint("ClickableViewAccessibility")
     DrawThread(SurfaceHolder surfaceHolder, DisplayMetrics metrics) {
@@ -25,8 +27,13 @@ public class DrawThread extends Thread {
         // Paint
         paint = new Paint();
         paint.setAntiAlias(true);
+        
+        // multiply for every x or y point in canvas for scaling (16:9 only)
+        scaleY = metrics.heightPixels / 720.f;
+        scaleX = metrics.widthPixels / 1280.f;
+        
         // load components for graphics
-
+        
         // save current time
         prevTime = System.currentTimeMillis();
     }
@@ -62,7 +69,8 @@ public class DrawThread extends Thread {
                 if (canvas != null) synchronized (surfaceHolder) {
                     // graphics
                     canvas.drawColor(Color.BLACK);
-
+                    
+                    // multiply for scaleXY is necessary 
                 }
             } finally {
                 if (canvas != null) {
