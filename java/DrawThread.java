@@ -28,8 +28,8 @@ public class DrawThread extends Thread {
         paint.setAntiAlias(true);
         
         // multiply for every x or y point in canvas for scaling (16:9 only)
-        scaleY = metrics.heightPixels / 720.f;
-        scaleX = metrics.widthPixels / 1280.f;
+        scaleY = metrics.heightPixels / 1280.f;
+        scaleX = metrics.widthPixels / 720.f;
         
         // load components for graphics
         
